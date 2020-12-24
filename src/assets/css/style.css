@@ -1,0 +1,257 @@
+/* style.scss */
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+body {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 13px;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.invisible {
+  display: none;
+}
+
+table {
+  width: 300px;
+  margin: 1rem auto;
+  text-align: center;
+  padding: 4px;
+  font-size: 13px;
+}
+
+table caption {
+  text-transform: uppercase;
+}
+
+table th {
+  background: gray;
+  color: #FFF;
+}
+
+.row {
+  text-align: center;
+}
+
+.row .message {
+  max-width: 550px;
+  margin: 1rem auto;
+  padding: 0.1rem 1rem 1rem 1rem;
+  background-color: bisque;
+  border-radius: 10px;
+  display: block;
+}
+
+.row .bouton {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  color: #FFF;
+  background: cadetblue;
+  border-radius: 4px;
+  padding: 4px 8px;
+  display: inline-block;
+}
+
+.row .bouton:hover {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: darkcyan;
+  cursor: pointer;
+}
+
+.row .bouton.invisible {
+  display: none;
+}
+
+form {
+  padding: 20px;
+}
+
+form label {
+  font-weight: bold;
+  padding: 4px;
+}
+
+form input {
+  width: 100px;
+  padding: 4px;
+}
+
+/* style card */
+.card {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: url(/assets/images/cards.png);
+  border: 2px solid transparent;
+  margin: 0 1px;
+  font-size: 0;
+}
+
+.card:hover {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  opacity: 0.8;
+}
+
+.cache {
+  background: #ccc;
+}
+
+.clic {
+  border: 2px solid #000;
+}
+
+.bravo {
+  -webkit-animation: pulse 0.9s 1 ease-in-out;
+          animation: pulse 0.9s 1 ease-in-out;
+  text-shadow: #FC0 1px 0 0px;
+  border: 2px solid transparent;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    text-shadow: #FC0 1px 0 0px;
+    opacity: 0.5;
+    border: 2px solid green;
+  }
+  50% {
+    text-shadow: #FC0 1px 0 20px;
+  }
+  70% {
+    text-shadow: #FC0 1px 0 10px;
+    border: 2px solid green;
+  }
+  100% {
+    text-shadow: #FC0 1px 0 40px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: #FC0 1px 0 0px;
+    opacity: 0.5;
+    border: 2px solid green;
+  }
+  50% {
+    text-shadow: #FC0 1px 0 20px;
+  }
+  70% {
+    text-shadow: #FC0 1px 0 10px;
+    border: 2px solid green;
+  }
+  100% {
+    text-shadow: #FC0 1px 0 40px;
+  }
+}
+
+/* COMPTEUR */
+#compteur {
+  position: relative;
+  width: 200px;
+  height: 20px;
+  margin: auto;
+  background: lightgrey;
+  border-radius: 4px;
+}
+
+#compteur > .inner {
+  font-size: 13px;
+  font-weight: bold;
+  color: #FFF;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: red;
+  width: 0%;
+  height: 20px;
+  border-radius: 4px;
+}
+
+#compteur > .percent {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+  top: 0;
+}
+
+/* position du sprite pour les cartes */
+[data-card=item1] {
+  background-position: 0 -100px;
+}
+
+[data-card=item2] {
+  background-position: 0 -200px;
+}
+
+[data-card=item3] {
+  background-position: 0 -300px;
+}
+
+[data-card=item4] {
+  background-position: 0 -400px;
+}
+
+[data-card=item5] {
+  background-position: 0 -500px;
+}
+
+[data-card=item6] {
+  background-position: 0 -600px;
+}
+
+[data-card=item7] {
+  background-position: 0 -700px;
+}
+
+[data-card=item8] {
+  background-position: 0 -800px;
+}
+
+[data-card=item9] {
+  background-position: 0 -900px;
+}
+
+[data-card=item10] {
+  background-position: 0 -1000px;
+}
+
+[data-card=item11] {
+  background-position: 0 -1100px;
+}
+
+[data-card=item12] {
+  background-position: 0 -1200px;
+}
+
+[data-card=item13] {
+  background-position: 0 -1300px;
+}
+
+[data-card=item14] {
+  background-position: 0 -1400px;
+}
+
+[data-card=item15] {
+  background-position: 0 -1500px;
+}
+
+[data-card=item16] {
+  background-position: 0 -1600px;
+}
+
+[data-card=item17] {
+  background-position: 0 -1700px;
+}
+
+[data-card=item18] {
+  background-position: 0 -1800px;
+}
+/*# sourceMappingURL=style.css.map */

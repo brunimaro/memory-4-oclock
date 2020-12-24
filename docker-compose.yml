@@ -1,0 +1,37 @@
+version: '3'
+services:
+  web:
+    image: naveed125/nginx-php-fpm:latest
+    restart: always
+    ports:
+    - "80:80"
+    volumes:
+    - ./src:/var/www/html
+    links:
+    - db
+    environment:
+    - DEPLOYMENT=development
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      PMA_ARBITRARY: 1
+      MYSQL_USER: user
+      MYSQL_PASSWORD: supersecret
+      PMA_HOST: nono
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+  db:
+    image: mysql
+    container_name: nono
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: appdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: supersecret
+    ports: 
+      - "33060:3306"

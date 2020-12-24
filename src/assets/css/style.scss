@@ -1,0 +1,177 @@
+/* style.scss */
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+$font-family: 'Titillium Web', sans-serif;
+$font-size : 13px;
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.invisible {
+    display: none;
+}
+
+table {
+    width: 300px;
+    margin: 1rem auto;
+    text-align: center;
+    padding: 4px;
+    font-size: $font-size;
+    caption {
+        text-transform: uppercase;;
+    }
+    th {
+        background: gray;
+        color: #FFF;
+    }
+}
+
+.row {
+    text-align: center;
+
+    .message {
+        max-width: 550px;
+        margin: 1rem auto;
+        padding: 0.1rem 1rem 1rem 1rem;
+        background-color: bisque;
+        border-radius: 10px;
+        display: block; 
+    }
+
+    .bouton {
+        transition: all 0.2s ease-out;
+        color: #FFF;
+        background: cadetblue;
+        border-radius: 4px;
+        padding: 4px 8px;
+        display: inline-block;
+
+        &:hover {
+            transition: all 0.2s ease-out;
+            background: darkcyan;
+            cursor: pointer;
+        }
+
+        &.invisible {
+            display: none;
+        }
+
+    }
+}
+
+form {
+    padding: 20px;
+    label {
+        font-weight: bold;
+        padding: 4px;
+    }
+    input {
+        width: 100px;
+        padding: 4px;
+    }
+}
+
+/* style card */
+
+.card {
+    
+	transition: all 0.2s ease-out;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: url(/assets/images/cards.png);
+    border: 2px solid transparent;
+    margin: 0 1px;
+    font-size: 0;
+
+	&:hover {
+		transition: all 0.2s ease-out;
+	    cursor: pointer;
+	    border: 2px solid #ccc;
+	    opacity:0.8;
+	}
+
+}
+
+.cache {
+    background: #ccc;
+}
+
+.clic {
+    border: 2px solid #000;
+}
+
+.bravo {
+    animation: pulse 0.9s 1 ease-in-out;
+    text-shadow: #FC0 1px 0 0px;
+    border: 2px solid transparent;
+}
+
+@keyframes pulse {
+    0% {
+      text-shadow: #FC0 1px 0 0px;
+      opacity: 0.5;
+      border: 2px solid green;
+    }
+    50% {
+      text-shadow: #FC0 1px 0 20px;
+      
+    }
+    70% {
+      text-shadow: #FC0 1px 0 10px;
+      border: 2px solid green;
+    }
+    100% {
+      text-shadow: #FC0 1px 0 40px;      
+    }
+  }
+
+/* COMPTEUR */
+
+#compteur {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    margin: auto;
+    background: lightgrey;
+    border-radius: 4px;
+
+    > .inner {
+	    font-size: 13px;
+	    font-weight: bold;
+	    color: #FFF;
+		transition: all 0.2s ease-out;
+	    background: red;
+	    width: 0%;
+	    height: 20px;
+	    border-radius: 4px;
+	}
+
+	> .percent {    
+        position: absolute;
+        width: 100%;
+	    text-align: center;
+        margin-bottom: 10px;
+        display: block;
+        top: 0;
+	}
+
+}
+
+/* position du sprite pour les cartes */
+
+@for $i from 1 through 18 {
+
+	[data-card=item#{$i}] { 
+    	background-position: 0 (-100*$i#{px});
+	}
+
+}
