@@ -60,6 +60,6 @@ src/inc/functions.php
 
 Toutes les sources du jeu se trouvent dans le dossier /src et doivent être installé dans un environnement LEMP pour fonctionner
 
-** DOCKER **
+**DOCKER
 
 Le fichier docker-compose.yml permet la configuration d'un environnement de développement Nginx, MySQL et PHP (LEMP) simple qui a été utilisé pour le développement de ce Memory.
