@@ -20,7 +20,7 @@ une démo est [disponible ici](https://memory.brunimaro.tk/)
     ├── src
     ├──── assets
     ├──────── css
-    ├──────────── ajstyle.css
+    ├──────────── style.css
     ├──────────── style.scss
     ├──────── images
     ├──────────── cards.png
